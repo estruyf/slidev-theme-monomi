@@ -1,0 +1,9 @@
+.slidev-code,
+:not(pre) > code {
+  background: var(--slidev-theme-code-background) !important;
+}
+
+.slidev-code {
+  padding: var(--slidev-theme-code-padding) !important;
+  border-radius: 0 !important;
+}

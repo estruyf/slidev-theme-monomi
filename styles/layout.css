@@ -1,0 +1,56 @@
+:root {
+  /* default theme */
+  /* can be overrided by uses `themeConfig` option */
+  --slidev-theme-background: #000;
+  --slidev-theme-color: #fff;
+
+  --slidev-theme-title-font-weight: 900;
+
+  --slidev-theme-box-background: #fff;
+  --slidev-theme-box-foreground: #000;
+  --slidev-theme-box-font-weight: 900;
+
+  --slidev-theme-code-background: #000;
+  --slidev-theme-code-padding: 5px;
+
+  --slidev-theme-primary: #f141a8;
+}
+
+.dark #slide-content,
+.slidev-layout {
+  background: var(--slidev-theme-background);
+  color: var(--slidev-theme-color);
+}
+
+.slidev-layout {
+  h1 {
+    @apply p-2 w-auto inline-block;
+    background: var(--slidev-theme-box-background);
+    color: var(--slidev-theme-box-foreground);
+    font-weight: var(--slidev-theme-title-font-weight);
+  }
+}
+
+.slidev-layout.cover,
+.slidev-layout.intro {
+  @apply h-full grid;
+
+  h1 {
+    @apply text-5xl w-4/6 p-4 inline-block leading-tight mx-auto;
+    background: var(--slidev-theme-box-background);
+    color: var(--slidev-theme-box-foreground);
+    font-weight: var(--slidev-theme-box-font-weight);
+    min-height: 25vh;
+  }
+
+  h1 + p {
+    @apply text-2xl -mt-2 mb-4 w-4/6 mx-auto pl-4;
+    color: var(--slidev-theme-box-background);
+  }
+
+  p + h2,
+  ul + h2,
+  table + h2 {
+    @apply mt-10;
+  }
+}
