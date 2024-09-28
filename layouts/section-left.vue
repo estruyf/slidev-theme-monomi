@@ -12,7 +12,7 @@
 <template>
   <div class="slidev-layout section-left" :style="style">
     <div class="my-auto h-full flex flex-col justify-center">
-      <div class="py-8 w-2/3">
+      <div class="box py-8 w-2/3">
         <slot />
       </div>
     </div>

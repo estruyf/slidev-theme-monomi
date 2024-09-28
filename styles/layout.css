@@ -1,26 +1,42 @@
 :root {
   /* default theme */
   /* can be overrided by uses `themeConfig` option */
+  --slidev-theme-bordered: 0;
+
   --slidev-theme-background: #000;
-  --slidev-theme-color: #fff;
+  --slidev-theme-foreground: #fff;
 
   --slidev-theme-title-font-weight: 900;
 
   --slidev-theme-box-background: #fff;
   --slidev-theme-box-foreground: #000;
-  --slidev-theme-box-font-weight: 900;
 
   --slidev-theme-code-background: #000;
-  --slidev-theme-code-foreground: #fff;
   --slidev-theme-code-padding: 5px;
 
+  --slidev-theme-inline-code-background: #000;
+  --slidev-theme-inline-code-foreground: #fff;
+
   --slidev-theme-primary: #f141a8;
+}
+
+.light {
+  --slidev-theme-background: #fff;
+  --slidev-theme-foreground: #000;
+
+  --slidev-theme-box-background: #000;
+  --slidev-theme-box-foreground: #fff;
+
+  --slidev-theme-code-background: #000;
+
+  --slidev-theme-inline-code-background: #fff;
+  --slidev-theme-inline-code-foreground: #000;
 }
 
 .dark #slide-content,
 .slidev-layout {
   background: var(--slidev-theme-background);
-  color: var(--slidev-theme-color);
+  color: var(--slidev-theme-foreground);
 }
 
 .slidev-layout {
@@ -29,7 +45,11 @@
     background: var(--slidev-theme-box-background);
     color: var(--slidev-theme-box-foreground);
     font-weight: var(--slidev-theme-title-font-weight);
-    padding-bottom: calc(0.5rem - 5px);
+
+    border: calc(2 * var(--slidev-theme-bordered)) solid
+      var(--slidev-theme-background);
+    outline: var(--slidev-theme-bordered) solid
+      var(--slidev-theme-box-background);
   }
 }
 
@@ -41,14 +61,14 @@
     @apply text-5xl w-4/6 p-4 inline-block leading-tight mx-auto;
     background: var(--slidev-theme-box-background);
     color: var(--slidev-theme-box-foreground);
-    font-weight: var(--slidev-theme-box-font-weight);
     min-height: 25vh;
   }
 
   h1 + h2,
   h1 + p {
-    @apply text-2xl -mt-2 mb-4 w-4/6 mx-auto pl-4;
+    @apply text-2xl -mt-2 mb-4 w-4/6 mx-auto;
     color: var(--slidev-theme-box-background);
+    padding-left: calc(1rem + (2 * var(--slidev-theme-bordered)));
   }
 
   p + h2,
@@ -58,28 +78,118 @@
   }
 }
 
-.slidev-layout.section-left {
-  margin-left: -3.5rem;
+.slidev-layout.image {
+  &.image-top {
+    padding-top: 0;
+
+    h1 {
+      margin-top: calc(-2 * var(--slidev-theme-bordered));
+    }
+  }
+
+  &.image-center {
+    > div {
+      @apply h-full items-center;
+    }
+  }
+
+  &.image-bottom {
+    padding-bottom: 0;
+
+    > div {
+      @apply h-full items-end;
+    }
+
+    h1 {
+      margin-bottom: calc(-2 * var(--slidev-theme-bordered));
+    }
+  }
+
+  h1 {
+    @apply text-5xl mb-0;
+  }
 }
 
-.slidev-layout.section-right {
-  margin-right: -3.5rem;
+.slidev-layout.section {
+  @apply px-0 w-full flex items-center;
+
+  > div {
+    @apply p-8 w-full text-center;
+    background: var(--slidev-theme-box-background);
+    color: var(--slidev-theme-box-foreground);
+
+    border-bottom: calc(2 * var(--slidev-theme-bordered)) solid
+      var(--slidev-theme-background);
+    border-top: calc(2 * var(--slidev-theme-bordered)) solid
+      var(--slidev-theme-background);
+    outline: var(--slidev-theme-bordered) solid
+      var(--slidev-theme-box-background);
+  }
+
+  h1 {
+    @apply text-5xl mb-0;
+
+    border: 0;
+    outline: 0;
+  }
 }
 
 .slidev-layout.section-left,
 .slidev-layout.section-right {
   > div {
     color: var(--slidev-theme-box-foreground);
-
-    > div {
-      background: var(--slidev-theme-box-background);
-      padding-left: 3.5rem;
-      padding-right: 3.5rem;
-    }
   }
 
-  code {
-    color: var(--slidev-theme-code-foreground);
+  .box {
+    background: var(--slidev-theme-box-background);
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+
+    border: calc(2 * var(--slidev-theme-bordered)) solid
+      var(--slidev-theme-background);
+    outline: var(--slidev-theme-bordered) solid
+      var(--slidev-theme-box-background);
+  }
+
+  h1 {
+    @apply text-5xl mb-0;
+
+    border: 0;
+    outline: 0;
+  }
+}
+
+.slidev-layout.section-left {
+  margin-left: -3.5rem;
+
+  .box {
+    border-left: 0;
+  }
+}
+
+.slidev-layout.section-right {
+  margin-right: -3.5rem;
+
+  .box {
+    border-right: 0;
+  }
+}
+
+.slidev-layout.two-columns {
+  .col-left > :not(h1),
+  .col-right > :not(h1) {
+    padding-left: var(--slidev-theme-bordered);
+  }
+}
+
+.slidev-layout.end {
+  background: var(--slidev-theme-background) !important;
+  color: var(--slidev-theme-foreground) !important;
+
+  h1 {
+    @apply text-5xl mb-0;
+    background: var(--slidev-theme-background);
+    color: var(--slidev-theme-foreground);
   }
 }
 
@@ -98,5 +208,9 @@
 
   .about_me__image {
     height: calc(100% - 1rem);
+  }
+
+  .about_me__contents {
+    padding-left: var(--slidev-theme-bordered);
   }
 }

@@ -1,6 +1,10 @@
-.slidev-code,
-:not(pre) > code {
+.slidev-code {
   background: var(--slidev-theme-code-background) !important;
+}
+
+:not(pre) > code {
+  background: var(--slidev-theme-inline-code-background) !important;
+  color: var(--slidev-theme-inline-code-foreground) !important;
 }
 
 .slidev-code {

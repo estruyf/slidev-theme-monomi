@@ -23,46 +23,34 @@ A **mono**chrome-**mi**nimalist theme for [Slidev](https://github.com/slidevjs/s
 
 Add the following frontmatter to your `slides.md`. Start Slidev then it will prompt you to install the theme automatically.
 
-<pre><code>---
-theme: <b>bold</b>
----</code></pre>
+```yaml
+---
+theme: monomi
+---
+```
 
 Learn more about [how to use a theme](https://sli.dev/themes/use).
 
 ## Theme config
 
-### Light mode
+The theme supports both light and dark mode. Dark mode is the default.
+
+If you want to switch to light mode, add the following configuration:
 
 ```yaml
-themeConfig:
-  background: "#000"
-  color: "#fff"
-  title-font-weight: "900"
-  
-  box-background: "#fff"
-  box-foreground: "#000"
-  box-font-weight: "900"
-
-  code-background: "#000"
-  code-padding: "5px"
-
-  primary: "#f141a8"
+---
+theme: monomi
+colorSchema: light
+---
 ```
 
-### Dark mode
+### Bordered headings
+
+You can add borders to headings by adding the `bordered` class to the heading.
 
 ```yaml
+---
 themeConfig:
-  background: "#fff"
-  color: "#000"
-  title-font-weight: "900"
-  
-  box-background: "#000"
-  box-foreground: "#fff"
-  box-font-weight: "900"
-
-  code-background: "#000"
-  code-padding: "5px"
-
-  primary: "#f141a8"
+  bordered: "5px"
+---
 ```

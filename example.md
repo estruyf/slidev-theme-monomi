@@ -1,19 +1,10 @@
 ---
 theme: ./
+colorSchema: light
 
-# themeConfig:
-#   background: "#fff"
-#   color: "#000"
-#   title-font-weight: "900"
-  
-#   box-background: "#000"
-#   box-foreground: "#fff"
-#   box-font-weight: "900"
-
-#   code-background: "#000"
-#   code-padding: "5px"
-
-#   primary: "#f141a8"
+themeConfig:
+  title-font-weight: "800"
+  code-padding: "0"
 ---
 
 # Slidev - MonoMi Theme
@@ -122,9 +113,26 @@ image: https://cover.sli.dev
 ---
 layout: image
 image: https://cover.sli.dev
+position: top
 ---
 
-# Image with a title
+# Image with a title (top)
+
+---
+layout: image
+image: https://cover.sli.dev
+position: center
+---
+
+# Image with a title (center)
+
+---
+layout: image
+image: https://cover.sli.dev
+position: bottom
+---
+
+# Image with a title (bottom)
 
 ---
 layout: image-left
@@ -171,14 +179,6 @@ image: https://cover.sli.dev
 This is a `section-left` slide.
 
 ---
-layout: statement
----
-
-# Statement
-
-This is a statement slide.
-
----
 layout: two-cols
 ---
 
@@ -192,29 +192,6 @@ This shows on the left
 
 This shows on the right
 
----
-layout: two-cols-header
----
-
-This spans both
-
-::left::
-
-# Left
-
-This shows on the left
-
-::right::
-
-# Right
-
-This shows on the right
-
----
-layout: fact
----
-
-# Fact
 
 ---
 layout: end

@@ -33,7 +33,7 @@
       <div class="w-1/2 flex flex-col justify-between px-8 py-16" :class="textItems">
         <h1 v-if="helloMsg" class="flex">{{ helloMsg }}</h1>
 
-        <div class="flex flex-col justify-end py-16" :class="[textItems, textAlign]">
+        <div class="about_me__contents flex flex-col justify-end py-16" :class="[textItems, textAlign]">
           <h2 class="font-extrabold">{{ name }}</h2>
 
           <div class="text-2xl space-y-2 mt-4">
