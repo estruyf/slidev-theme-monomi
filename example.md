@@ -105,3 +105,119 @@ class: "text-center"
 # Learn More
 
 [Documentation](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+
+---
+layout: intro
+---
+
+# Introduction
+
+## Author
+
+---
+layout: image
+image: https://cover.sli.dev
+---
+
+---
+layout: image
+image: https://cover.sli.dev
+---
+
+# Image with a title
+
+---
+layout: image-left
+image: https://cover.sli.dev
+---
+
+# Image left
+
+This is an example of an image on the left side of the slide.
+
+---
+layout: image-right
+image: https://cover.sli.dev
+---
+
+# Image right
+
+This is an example of an image on the right side of the slide.
+
+---
+layout: section
+---
+
+# Section
+
+This is a section slide.
+
+---
+layout: section-right
+image: https://cover.sli.dev
+---
+
+# section-right
+
+This is a `section-right` slide.
+
+---
+layout: section-left
+image: https://cover.sli.dev
+---
+
+# section-left
+
+This is a `section-left` slide.
+
+---
+layout: statement
+---
+
+# Statement
+
+This is a statement slide.
+
+---
+layout: two-cols
+---
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+
+---
+layout: two-cols-header
+---
+
+This spans both
+
+::left::
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+
+---
+layout: fact
+---
+
+# Fact
+
+---
+layout: end
+---
+
+# The End

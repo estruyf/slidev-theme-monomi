@@ -1,6 +1,6 @@
 <template>
-  <div class="slidev-layout intro">
-    <div class="my-auto">
+  <div class="slidev-layout cover">
+    <div class="my-auto w-full flex flex-col">
       <slot />
     </div>
   </div>

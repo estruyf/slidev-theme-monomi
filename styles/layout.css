@@ -11,6 +11,7 @@
   --slidev-theme-box-font-weight: 900;
 
   --slidev-theme-code-background: #000;
+  --slidev-theme-code-foreground: #fff;
   --slidev-theme-code-padding: 5px;
 
   --slidev-theme-primary: #f141a8;
@@ -28,6 +29,7 @@
     background: var(--slidev-theme-box-background);
     color: var(--slidev-theme-box-foreground);
     font-weight: var(--slidev-theme-title-font-weight);
+    padding-bottom: calc(0.5rem - 5px);
   }
 }
 
@@ -43,6 +45,7 @@
     min-height: 25vh;
   }
 
+  h1 + h2,
   h1 + p {
     @apply text-2xl -mt-2 mb-4 w-4/6 mx-auto pl-4;
     color: var(--slidev-theme-box-background);
@@ -52,6 +55,31 @@
   ul + h2,
   table + h2 {
     @apply mt-10;
+  }
+}
+
+.slidev-layout.section-left {
+  margin-left: -3.5rem;
+}
+
+.slidev-layout.section-right {
+  margin-right: -3.5rem;
+}
+
+.slidev-layout.section-left,
+.slidev-layout.section-right {
+  > div {
+    color: var(--slidev-theme-box-foreground);
+
+    > div {
+      background: var(--slidev-theme-box-background);
+      padding-left: 3.5rem;
+      padding-right: 3.5rem;
+    }
+  }
+
+  code {
+    color: var(--slidev-theme-code-foreground);
   }
 }
 
