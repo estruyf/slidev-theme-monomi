@@ -1,24 +1,40 @@
 ---
 theme: ./
 
-themeConfig:
-  background: "#fff"
-  color: "#000"
-  title-font-weight: "900"
+# themeConfig:
+#   background: "#fff"
+#   color: "#000"
+#   title-font-weight: "900"
   
-  box-background: "#000"
-  box-foreground: "#fff"
-  box-font-weight: "900"
+#   box-background: "#000"
+#   box-foreground: "#fff"
+#   box-font-weight: "900"
 
-  code-background: "#000"
-  code-padding: "5px"
+#   code-background: "#000"
+#   code-padding: "5px"
 
-  primary: "#f141a8"
+#   primary: "#f141a8"
 ---
 
-# This is the title of the presentation
+# Slidev - MonoMi Theme
 
-&dash; by Elio Struyf
+&mdash; by Elio Struyf
+
+---
+layout: about-me
+
+position: left # left, right - Default: right
+helloMsg: Hello!
+name: Elio Struyf
+imageSrc: https://elio.dev/eliostruyf_bw_cutout.png
+# imageSrc: https://elio.dev/eliostruyf_bw_black_cutout.png
+job: Struyf Consulting
+line1: "#Stickerpreneur @ pyod.shop"
+line2: "#Maintainer @ Front Matter CMS"
+social1: "@eliostruyf"
+social2: eliostruyf.com
+social3: elio@struyfconsulting.be
+---
 
 ---
 

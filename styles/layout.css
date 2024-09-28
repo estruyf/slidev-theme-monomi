@@ -54,3 +54,21 @@
     @apply mt-10;
   }
 }
+
+.about_me {
+  h1 {
+    @apply text-6xl mb-0;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .about_me__image {
+    height: calc(100% - 1rem);
+  }
+}
