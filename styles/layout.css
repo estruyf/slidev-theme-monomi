@@ -182,6 +182,25 @@
   }
 }
 
+.slidev-layout.fact {
+  @apply flex justify-center items-center h-full w-full;
+
+  h1 {
+    @apply block bg-transparent p-0 m-0 outline-none border-0;
+    color: var(--slidev-theme-foreground);
+    font-size: 16rem;
+    line-height: normal;
+  }
+
+  &.inverted {
+    background: var(--slidev-theme-foreground);
+
+    h1 {
+      color: var(--slidev-theme-background);
+    }
+  }
+}
+
 .slidev-layout.end {
   background: var(--slidev-theme-background) !important;
   color: var(--slidev-theme-foreground) !important;
