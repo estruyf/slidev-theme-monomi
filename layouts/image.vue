@@ -5,6 +5,7 @@
   const props = defineProps<{
     image?: string
     position?: "top" | "center" | "bottom"
+    imageBw?: boolean // black and white
   }>()
 
   const style = computed(() => handleBackground(props.image, false, "cover"))
@@ -20,10 +21,11 @@
         return "image-top"
     }
   })
+  const blackAndWhite = computed(() => props.imageBw ? "filter: grayscale(1)" : "")
 </script>
 
 <template>
-  <div class="slidev-layout image" :class="position" :style="style">
+  <div class="slidev-layout image" :class="position" :style="[style, blackAndWhite]">
     <div class="flex justify-center w-2/3 mx-auto">
       <slot />
     </div>

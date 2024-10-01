@@ -2,6 +2,7 @@
   /* default theme */
   /* can be overrided by uses `themeConfig` option */
   --slidev-theme-bordered: 0;
+  --slidev-theme-font-size: 1.1em;
 
   --slidev-theme-background: #000;
   --slidev-theme-foreground: #fff;
@@ -37,6 +38,7 @@
 .slidev-layout {
   background: var(--slidev-theme-background);
   color: var(--slidev-theme-foreground);
+  font-size: var(--slidev-theme-font-size, 1.1em);
 }
 
 .slidev-layout {
@@ -132,6 +134,20 @@
     border: 0;
     outline: 0;
   }
+
+  &.inverted {
+    background: var(--slidev-theme-foreground);
+
+    > div {
+      background: var(--slidev-theme-box-foreground);
+      color: var(--slidev-theme-box-background);
+    }
+
+    h1 {
+      background: var(--slidev-theme-box-foreground);
+      color: var(--slidev-theme-box-background);
+    }
+  }
 }
 
 .slidev-layout.section-left,
@@ -156,6 +172,19 @@
 
     border: 0;
     outline: 0;
+  }
+
+  &.inverted {
+    background: var(--slidev-theme-foreground);
+
+    .box {
+      background: var(--slidev-theme-box-foreground);
+    }
+
+    h1 {
+      background: var(--slidev-theme-box-foreground);
+      color: var(--slidev-theme-box-background);
+    }
   }
 }
 
