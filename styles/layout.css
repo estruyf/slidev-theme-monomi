@@ -52,6 +52,8 @@
       var(--slidev-theme-background);
     outline: var(--slidev-theme-bordered) solid
       var(--slidev-theme-box-background);
+
+    margin-left: 0;
   }
 
   h1:not(:first-child) {
@@ -143,7 +145,7 @@
   }
 
   h1 {
-    @apply text-5xl mb-0;
+    @apply block text-5xl mb-0 p-8;
   }
 
   &.inverted {
@@ -151,6 +153,10 @@
 
     h1 {
       background: var(--slidev-theme-box-foreground);
+      color: var(--slidev-theme-box-background);
+    }
+
+    p {
       color: var(--slidev-theme-box-background);
     }
   }
@@ -191,6 +197,10 @@
       background: var(--slidev-theme-box-foreground);
       color: var(--slidev-theme-box-background);
     }
+
+    p {
+      color: var(--slidev-theme-box-background);
+    }
   }
 }
 
@@ -227,6 +237,10 @@
 
     h1 {
       background: var(--slidev-theme-box-foreground);
+      color: var(--slidev-theme-box-background);
+    }
+
+    p {
       color: var(--slidev-theme-box-background);
     }
   }
