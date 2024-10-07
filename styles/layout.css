@@ -98,7 +98,7 @@
     @apply text-5xl w-4/6 p-4 inline-block leading-tight mx-auto;
     background: var(--slidev-theme-box-background);
     color: var(--slidev-theme-box-foreground);
-    min-height: 25vh;
+    min-height: 25%;
   }
 
   h1 + h2,
@@ -144,6 +144,15 @@
 
   h1 {
     @apply text-5xl mb-0;
+  }
+
+  &.inverted {
+    background: var(--slidev-theme-foreground);
+
+    h1 {
+      background: var(--slidev-theme-box-foreground);
+      color: var(--slidev-theme-box-background);
+    }
   }
 }
 
