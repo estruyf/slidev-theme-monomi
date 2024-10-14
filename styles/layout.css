@@ -273,7 +273,7 @@
   @apply flex justify-center items-center h-full w-full;
 
   h1 {
-    @apply block bg-transparent p-0 m-0 outline-none border-0;
+    @apply block bg-transparent p-0 m-0 outline-none border-0 whitespace-nowrap;
     color: var(--slidev-theme-foreground);
     font-size: 16rem;
     line-height: normal;
