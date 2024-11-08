@@ -206,6 +206,35 @@ This shows on the left
 
 This shows on the right
 
+--- 
+
+# Monaco Editor
+
+```ts {monaco}
+interface User {
+  id: number
+  firstName: string
+  lastName: string
+  role: string
+}
+
+function updateUser(id: number, update: Partial<User>) {
+  const user = getUser(id)
+  const newUser = { ...user, ...update }
+  saveUser(id, newUser)
+}
+```
+
+---
+invert: true
+---
+
+# Monaco Editor
+
+```ts {monaco-run} {autorun:false}
+console.log('Click the play button to run me')
+```
+
 
 ---
 layout: end

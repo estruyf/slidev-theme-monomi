@@ -1,4 +1,7 @@
-.slidev-code {
+.slidev-code,
+.slidev-monaco-container,
+.monaco-editor-background,
+.monaco-editor .margin {
   background: var(--slidev-theme-code-background) !important;
 }
 

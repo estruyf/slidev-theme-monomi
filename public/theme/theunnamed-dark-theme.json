@@ -1,6 +1,6 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "The unnamed",
+  "name": "the-unnamed",
   "type": "dark",
   "colors": {
     "foreground": "#F3EFF5",
