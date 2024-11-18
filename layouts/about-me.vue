@@ -14,6 +14,7 @@
     social2?: string
     social3?: string
     position?: string
+    imageStyle?: Record<string, string>
   }>()
 
   const style = computed(() => handleBackground(props.imageSrc, false, "contain"))
@@ -28,7 +29,7 @@
   <div class="slidev-layout about_me p-0">
     <div class="flex h-full" :class="flexRow">
       <div class="w-1/2 h-full flex flex-col justify-end relative">
-        <div class="about_me__image" :style="style"></div>
+        <div class="about_me__image" :style="[style, imageStyle]"></div>
       </div>
       <div class="w-1/2 flex flex-col justify-between px-8 py-16" :class="textItems">
         <h1 v-if="helloMsg" class="flex">{{ helloMsg }}</h1>

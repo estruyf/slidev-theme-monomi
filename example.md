@@ -17,8 +17,10 @@ layout: about-me
 position: left # left, right - Default: right
 helloMsg: Hello!
 name: Elio Struyf
-imageSrc: https://elio.dev/eliostruyf_bw_cutout.png
+# imageSrc: https://elio.dev/eliostruyf_bw_cutout.png
 # imageSrc: https://elio.dev/eliostruyf_bw_black_cutout.png
+imageSrc: https://elio.dev/eliostruyf_2024_bw_cutout.png
+imageStyle: "background-position: center bottom; background-size: cover;"
 job: Struyf Consulting
 line1: "#Stickerpreneur @ pyod.shop"
 line2: "#Maintainer @ Front Matter CMS"
